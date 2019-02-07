@@ -319,7 +319,7 @@ def getTournamentSets(slug,key):
 
 def challongeURL(url):
     slug = getTournamentSlug(url)
-    key = '0CXUzpJLmzMWV0Kqz18dQoIVioR2BKgQNTXgOjnJ'
+    key = #####ADD UR OWN CHALLONGE API KEY ####
     L = getTournamentInfo(slug,key)
     Name = L[0]
     ID = L[1]
