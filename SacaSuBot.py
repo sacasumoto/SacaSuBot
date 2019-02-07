@@ -345,6 +345,5 @@ def on_message(message):
 
 
             
-##client.run('NDA5Mjg1NjY1MzMxNjA5NjAy.DVcviA.dKiHinANP7NHmUppSkO3QZQfOws')
-##client.run('NDA5Mjg1NjY1MzMxNjA5NjAy.DX-PrQ.LiMtqG1LxHEHV0u5haWpQAfZOMo')#Testing
-client.run('NDIwNDEwNTA1MzAwMjc5Mjk2.DX-RZg.KgwsuOWHRWrwzsV_jb69_e6fTZI')#SacaSuBot
+
+client.run('####USE UR OWN BOT KEY####')#SacaSuBot
