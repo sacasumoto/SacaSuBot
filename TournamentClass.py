@@ -43,7 +43,7 @@ phase_url = "http://api.smash.gg/phase_group/%s?expand[0]=sets&expand[1]=entrant
 def get_tournament_slug_from_smashgg_urls(url):
     return(url.split("/")[4])
 
-typical_event_slugs = ['melee-singles','smash-melee','singles','tmt-top-8','ladder']
+typical_event_slugs = ['melee-singles','smash-melee','singles','singles-bracket','smash-state-la','ladder-phase','tmt-top-8','ladder','smash-playlive-nation']
 
 
 def get_tournament_event_slugs(slug):
@@ -319,7 +319,7 @@ def getTournamentSets(slug,key):
 
 def challongeURL(url):
     slug = getTournamentSlug(url)
-    key = #CHALLONGE API KEY W.E
+    key = '0CXUzpJLmzMWV0Kqz18dQoIVioR2BKgQNTXgOjnJ'
     L = getTournamentInfo(slug,key)
     Name = L[0]
     ID = L[1]
@@ -469,14 +469,14 @@ class MasterTournament:
     def getPlayerActivityTournaments(self,player):
         tournaments = []
         for tournament in self.tournamentList:
-            if player in tournament.getEntrantList() and tournament.getTournamentEntrantcount() > 49:
+            if player in tournament.getEntrantList() and tournament.getTournamentEntrantcount() > 24:
                 tournaments.append(tournament.getTournamentName())
         return(sorted(tournaments))
 
     def getActivityTournaments(self):
         tournaments = []
         for tournament in self.tournamentList:
-            if tournament.getTournamentEntrantcount() > 49:
+            if tournament.getTournamentEntrantcount() > 24:
                 tournaments.append((tournament.getTournamentEntrantcount(),tournament.getTournamentName()))
         return(sorted(tournaments))
         
@@ -485,7 +485,7 @@ class MasterTournament:
         players = []
         activitytournaments = []
         for tournament in self.tournamentList:
-            if tournament.getTournamentEntrantcount() > 49:
+            if tournament.getTournamentEntrantcount() > 24:
                 for player in tournament.getEntrantList():
                     if player not in D:
                         D[player] = [1,tournament.getTournamentName()]

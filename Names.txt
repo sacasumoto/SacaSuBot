@@ -2,14 +2,14 @@
 4%: 4 %, 4%.
 A Rookie: A_Rookie
 Akbiggs: Ak bigs
-Alex19: Alex 19, notalex19, Notalex19
-Americandragon_Davidchong: Americandragondavidchong, American Dragon Dchong
+Alex19: Alex 19, Notalex19, notalex19
+Americandragon_Davidchong: American Dragon Dchong, Americandragondavidchong
 Anto: Ssbm-T Anto
 Arc: ARC
-Armada: P4K EMP Armada, Rmada
+Armada: Rmada, P4K EMP Armada
 Army: Army*
-Axe: Tempostorm Axe, Tempo.Axe, Mortality.Axe, Mortality_Axe, Tempo-Axe, Mortality Axe
-Baka4Moe: Baka, B4M
+Axe: Mortality.Axe, Tempostorm Axe, Tempo-Axe, Tempo.Axe, Mortality Axe, Mortality_Axe
+Baka4Moe: B4M, Baka
 Bart: Entities From The Beyond Within Corpses Obsessed
 Beasty_Turtle3: Beasty_Turtles, Ang The Avatar, Beastly_Turtle3
 Bernal: Bernaldoe
@@ -19,17 +19,17 @@ Bladewise: 62Bit Bladewise
 Boback: Boback Vakili
 Cactuar: Cactaur
 Cal: Cal**
-Captain Faceroll: (Tmg) Captain Faceroll, Ix Captain Faceroll
+Captain Faceroll: Ix Captain Faceroll, (Tmg) Captain Faceroll
 Captain Smuckers: Smuckers
-Cdk: (Tmg) Connor, Connorthekid, Connor
-Chillindude: Liquid' Chillindude, Liquid`Chillin, Chillindude829, Chillin
+Cdk: Connorthekid, Connor, (Tmg) Connor
+Chillindude: Liquid' Chillindude, Chillindude829, Liquid`Chillin, Chillin
 Chu Dat: Chudat
 Coastward: Emg_Coastward
 Cohenski: Cohenskii
 Coolkid: (Tmg) Coolkid
 Corkus: 4K.Corkus
 Craiger: Craigers
-Dandy: Emp Dandy, Dandy?
+Dandy: Dandy?, Emp Dandy
 Dantefox: (Tmg) Dantefox
 Dart!: Dart
 Dendypretendy: Oxy Dendypretendy
@@ -37,14 +37,14 @@ Destroyah: Princess Chodestool
 Dr. Light: Dr.Light
 Druggedfox: Druggedfox11, Drugged Fox
 Duck Chris: DuckChris
-Eddy Mexico: Eddymexico, XTR Eddy Mexico
+Eddy Mexico: XTR Eddy Mexico, Eddymexico
 Eggz: Salazar Slitherin (Eggz)
 Eikelmannrus: Eikelmann, Eikelman
 Eloy: Eloy Arias- Eloy, Eloy-Eloy
 Epic Murloc: Epicmurloc
 Eval: Espr Eval
 Excel Zero: Excelzero, Excel_Zero
-Fallennova: Bryant Serranno- Fallennova, Bryant - Fallennova
+Fallennova: Bryant - Fallennova, Bryant Serranno- Fallennova
 Fatgoku: Fat Goku
 Fiction: Fiction*
 Franz: Aljon- Franz
@@ -52,7 +52,8 @@ Gage: CaCAW Slurrpy Snake 32+37 Master
 Gahtzu: EE Gahtzu, GK Gahtzu
 Hax: VGBC Hax
 Hugs: Frq.Hugs
-Hungrybox: CRS.Hungrybox, Liquid Hungrybox, Liquid` Hungrybox, Liquid`Hungrybox, Crs. Hungrybox
+Hungrybox: CRS.Hungrybox, Liquid`Hungrybox, Crs. Hungrybox, Liquid Hungrybox, Liquid` Hungrybox
+Hurracan: honsul, Honsul
 Idea: Emg Idea, Emg_Idea
 Ironpiggy: Iron Piggy
 J666: Oxy L J666
@@ -60,56 +61,56 @@ Jeapie: Lll. Jeapie
 Jebailey: CEOJebailey
 Jpegimage: Jpeg
 Kage: Kage The Warrior
-Ken: Liquid`Ken, Liquid' Ken, Liquid ' Ken, LiquidKen, Liquid Ken
-Kira: Skt T1 Talon God (Kira), Ssbm-T Kira, Hyouketsunojudgeness (Kira)
+Ken: Liquid Ken, Liquid`Ken, Liquid' Ken, LiquidKen, Liquid ' Ken
+Kira: Ssbm-T Kira, Hyouketsunojudgeness (Kira), Skt T1 Talon God (Kira)
 Kirbykaze: Emg Kirbykaze
-Kl3Shikuh: Eric, Eri, Erik, Kl3Shikuh*
+Kl3Shikuh: Erik, Kl3Shikuh*, Eri, Eric
 Koopatroopa895: Koopatroopa
 Koreandj: Liquid`KDJ, KDJ
 Kramer: Kramepie
 Kyu Puff: The Pleaup (Kyu Puff)
 Lambchops: Beer Man
 Larry Lurr: Dehf
-Laudandus: Laundandus, Lauduandus, Laduandus
+Laudandus: Lauduandus, Laundandus, Laduandus
 Leffen: Tsm Leffen
-Lil' Snack: Billy Bo Peep, Lil'Snack, Billybopeep, Billy, BillyBoPeep
+Lil' Snack: Billybopeep, Billy Bo Peep, Lil'Snack, BillyBoPeep, Billy
 Luigikid: Luigi Kid
 Manatee: 62Sexy(Manatee)
-Mang0: C9 MaNg0, C9.Mango, Cloud9.Mango, C9 Mango, C9. Mango, C9 Mang0, Mango
-Matt: Victor Abdul Latif (Stab), Stabbedbyahippie, Stabbedbyanipple, Viktor Abdul Latif (Stab), (Tmg) Victor Abdul Latif, Victor Abdul Latif, Stab, Matt, Matt R
+Mang0: C9. Mango, C9 Mang0, C9.Mango, Cloud9.Mango, Mango, C9 Mango, C9 MaNg0
+Matt: Stabbedbyanipple, Matt R, Matt, Stabbedbyahippie, Victor Abdul Latif (Stab), Viktor Abdul Latif (Stab), (Tmg) Victor Abdul Latif, Stab, Victor Abdul Latif
 Medz: MVG Medz
-Megachristmas: Mega christmas, MegaX-mas, MegaXmas, Mega X-Mas, Mega X-mas, Mega Xmas, Mega Christmas, Megaxmas
-Mew2King: PL MVG EMP Mew2King, Mvg Mew2King, M2K, EMP Mew2King, COG MVG mew2king, P4K Mew2King, P4K EMP Mew2King, PL MVG mew2king
+Megachristmas: Mega X-mas, Mega X-Mas, Mega Christmas, MegaX-mas, Mega christmas, MegaXmas, Mega Xmas, Megaxmas
+Mew2King: P4K EMP Mew2King, COG MVG mew2king, Mvg Mew2King, M2K, P4K Mew2King, PL MVG mew2king, EMP Mew2King, PL MVG EMP Mew2King
 Mike Haze: Mikehaze, Jj'S Mikehaze
-Mikehaggar: Mike Haggar, Mikehaggarkj, Mikehaggarssbm
+Mikehaggar: Mike Haggar, Mikehaggarssbm, Mikehaggarkj
 Milkman: Oes Milkman
 Motoko: Joshua- Motoko, Josh- Motoko
 N3Z: N3Zmodgod, N3Z Mod God
 Neon: HF Neon
-Nintendude: Vgz.Nintendude, Vgz Nintendude
+Nintendude: Vgz Nintendude, Vgz.Nintendude
 Ny Joey: Joey Cheung
 Orly: Secret.Orly
 PPMD: Dr. PP
 Pb&J: Pbj
 Pc Chris: P.C. Chris
-Peachicedt: Peach Iced T (R), Peachicedtea
-Pewpewu: Clg.Pewpewu Cookiecat, Clg.Pewpewu, Ppu
-Porkchops: Pokchops, VS Porkchops
+Peachicedt: Peachicedtea, Peach Iced T (R)
+Pewpewu: Clg.Pewpewu Cookiecat, Ppu, Clg.Pewpewu
+Porkchops: VS Porkchops, Pokchops
 Prince Abu: Esi. Gg Prince Abu
 Professor Pro: Vws Professor Pro
 Purpletuce: Logan
-Raynex: Lp_Raynex, Lp Raynex, LP.raynEX
+Raynex: Lp_Raynex, LP.raynEX, Lp Raynex
 Reno: GK Reno
 Riddlebox: Kana Manami
 Ryan Ford: Unknown522
-S0Ft: Soft11, Soft
-Sacasumoto: (Tmg) Sacasumoto, Sacasumot0
-Santiago: El Fuego, ElFuego
+S0Ft: Soft, Soft11
+Sacasumoto: Sacasumot0, (Tmg) Sacasumoto
+Santiago: ElFuego, El Fuego
 Satdaddy: Zack
 Sauc3: Emg Sauc3
 Sfat: Clg.Sfat, Einstein Lover (Sfat)
 Shabman: Shab
-Sherigami: Sherigam, (Tmg) Sherigami
+Sherigami: (Tmg) Sherigami, Sherigam
 Shoyo: Sho
 Shroomed: MMG_Shroomed
 Silent Wolf: Gc Silentwolf
@@ -120,23 +121,24 @@ Smashg0D: Smahg0D
 Smilez : )
 Smokey: Dumb Cunt
 Squid: (Tmg) Squid
+Stomach Flu: Gastroenteritis
 Straight: Straight (Second Wave)
 Sung475: Oxy_Sung475, OXY SUNG475
-Swedish Delight: James Liu, Swedishdelight
+Swedish Delight: Swedishdelight, James Liu
 Tai: MVG Tai
 Tenshi: Tenshii
 The Moon: TheMoon
 Thegrimreaper: Thegrimereaper
 Trail: Trail.
-Trichael Man: Trichael Man ($), TrichaelMan, Trichael Man, Triachaelman
+Trichael Man: Trichael Man ($), Triachaelman, TrichaelMan, Trichael Man
 Tristans Rule: Tristan'S Rule
-Trulliam: Lp Trulliam, Lp_Trulliam
+Trulliam: Lp_Trulliam, Lp Trulliam
 Tuxedo Mask: Tuxedomask
 Twin A: Twin_A
 Velocity: Velovity
 Videowaffles: Videowaffles (Cpp)
-Weon-X: Emg_Weon-X, Emg Weon-X, Little Boy Big Dreams, The Ghost of White Marth
-Westballz: Westballz*, Tempo Westballz
+Weon-X: Little Boy Big Dreams, The Ghost of White Marth, Emg_Weon-X, Emg Weon-X
+Westballz: Tempo Westballz, Westballz*
 Widlar: Yoshimaster3000
 Wieners: Weiners
 Wizzrobe: CT Wizzrobe

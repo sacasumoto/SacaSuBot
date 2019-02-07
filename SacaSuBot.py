@@ -63,7 +63,12 @@ def on_message(message):
             final += tournament[1]+'\n'
         final.strip('\n')
         final += '```'
-        yield from client.send_message(message.channel, final)
+        if len(final) < 2000:
+            yield from client.send_message(message.channel, final)
+        else:
+            final_list = split_message(final)
+            for final in final_list:
+                yield from client.send_message(message.channel, final)
 
     elif message.content.startswith('!playertournaments'):
         txt = re.sub("!playertournaments ", "", message.content)
@@ -93,11 +98,92 @@ def on_message(message):
         recordDict = M.getPlayerWinsLossDict(player1)
         if player2 in recordDict:      
             record = recordDict[player2]
-            final = '```Record: {} {}-{} {}```'.format(player1,record[0],record[1],player2)
-        
+            final = '```Record: {} {}-{} {}'.format(player1,record[0],record[1],player2)
+
+
+            final += '\n\n'
+
+            
+            player1Tournaments  = M.getPlayerTournaments(player1)
+            player2Tournaments = M.getPlayerTournaments(player2)
+            tournaments = sorted(set(player1Tournaments) & set(player2Tournaments))
+            for tournament in M.tournamentList:
+                on = 0
+                if tournament.name in tournaments:
+                    setTuple  = tournament.sets
+                    for set1 in setTuple:
+                        if [player1,player2] == set1 or [player2,player1] == set1:
+                            if on == 1:
+                                final += '{} - {}\n'.format(set1[0],set1[1])
+                            else:
+                                final += '{}:\n'.format(tournament.name)
+                                final += '{} - {}\n'.format(set1[0],set1[1])
+                                on = 1
+                    final += '\n'
+            final += '```'
         else:
             final = '```{} has no record v.s. {}```'.format(player1, player2)
-        yield from client.send_message(message.channel, final)
+
+        if len(final) < 2000:
+            yield from client.send_message(message.channel, final)
+        else:
+            final_list = split_message(final)
+            for final in final_list:
+                yield from client.send_message(message.channel, final)
+
+
+
+    elif message.content.startswith('!compare'):
+        txt = re.sub("(!compare )", "", message.content)
+        txt = txt.split("-")
+        player1 = sf.normalize_name(txt[1])
+        player2 = sf.normalize_name(txt[2])
+        file = open('relevant.txt','r')
+        L = file.readlines()
+        file.close()
+        relevant = []
+        for line in L:
+            relevant.append(sf.normalize_name(line.strip('\n')))
+        player1Record = M.getPlayerWinsLossDict(player1)
+        player2Record = M.getPlayerWinsLossDict(player2)
+
+        dic = set(player1Record.keys()) & set(player2Record.keys())
+        common = []
+        for element in dic:
+            if element not in relevant:
+                common.append(element)
+        common = sorted(common)
+        enemyList = relevant + common
+
+        value = 10
+        for name in enemyList:
+            if len(name) > value:
+                value = len(name)
+        final = '```'
+        fermat = '{:<%d}\t{:<%d}\t{:<%d}\n' % (value,len(player1),len(player2))
+        final += fermat.format('Comparing:',player1,player2)
+
+        for enemy in enemyList:
+            if enemy in player1Record.keys():
+                p1WinLoss = player1Record[enemy]
+                p1Record = '{}-{}'.format(p1WinLoss[0],p1WinLoss[1])
+            else:
+                p1Record = 'n/a'
+            if enemy in player2Record.keys():
+                p2WinLoss = player2Record[enemy]
+                p2Record = '{}-{}'.format(p2WinLoss[0],p2WinLoss[1])
+            else:
+                p2Record = 'n/a'
+            final += fermat.format(enemy,p1Record,p2Record)
+        final += '```'
+
+        if len(final) < 2000:
+            yield from client.send_message(message.channel, final)
+        else:
+            final_list = split_message(final)
+            for final in final_list:
+                yield from client.send_message(message.channel, final)
+        
         
     elif message.content.startswith('!activity'):
         txt = message.content[10:]
@@ -110,7 +196,14 @@ def on_message(message):
             final += "{} has {} tournaments for activity```".format(player1, len(activeTournaments))
         else:
             final = '```{} has no tournaments for activity```'.format(player1)
-        yield from client.send_message(message.channel, final)
+
+
+        if len(final) < 2000:
+            yield from client.send_message(message.channel, final)
+        else:
+            final_list = split_message(final)
+            for final in final_list:
+                yield from client.send_message(message.channel, final)
 
     elif message.content.startswith('!alt_names'):
         txt = re.sub("!alt_names ", "", message.content)
@@ -138,6 +231,7 @@ def on_message(message):
             alt_names = alt_names_dict[player]
             final = "```{}'s alts: {}```".format(player,alt_names)
         pc.save_alt_names_dict()
+        M.normalizeNamesAgain()
         yield from client.send_message(message.channel, final)
 
     elif message.content.startswith('!results'):
@@ -153,6 +247,7 @@ def on_message(message):
             final += '{} {}-{}\n'.format(enemy,win,loss)
         final.strip('\n')
         final += '```'
+
         if len(final) < 2000:
             yield from client.send_message(message.channel, final)
         else:
@@ -199,18 +294,17 @@ def on_message(message):
         except:
             yield from client.edit_message(tmp, '```There was an error```')
 
-#I have to figure out how to close these files... LOL
 
     elif message.content.startswith('!uploadloadin'):
-        yield from client.send_file(message.channel,filepath+'\\LoadIn.txt',filename='LoadIn.txt',content="Here's the saved data")
+        yield from client.send_file(message.channel,filepath+'/LoadIn.txt',filename='LoadIn.txt',content="Here's the saved data")
     elif message.content.startswith('!upload_alt_names'):
-        yield from client.send_file(message.channel,filepath+'\\Names.txt',filename='Names.txt',content="Here's the alt names file")
+        yield from client.send_file(message.channel,filepath+'/Names.txt',filename='Names.txt',content="Here's the alt names file")
     elif message.content.startswith("!uploadentrants"):
         M.saveEntrantsToFile("Entrants.txt")
-        yield from client.send_file(message.channel,filepath+'\\Entrants.txt',filename='Entrants.txt',content="Here's the entrants file")
+        yield from client.send_file(message.channel,filepath+'/Entrants.txt',filename='Entrants.txt',content="Here's the entrants file")
     elif message.content.startswith("!uploadtournaments"):
         M.saveTournamentsToFile("Tournaments.txt")
-        yield from client.send_file(message.channel,filepath+'\\Tournaments.txt',filename='Tournaments.txt',content="Here's the tournaments file")
+        yield from client.send_file(message.channel,filepath+'/Tournaments.txt',filename='Tournaments.txt',content="Here's the tournaments file")
 
 
         
@@ -222,16 +316,26 @@ def on_message(message):
         final += "!playertournaments {player}: returns all player's tournaments\n"
         final += '!activitytournaments: returns the tournaments that count for activity\n'
         final += '!activity {player}: returns the activity tournaments for player\n'
+
         final += '!alt_names {player}: returns the alt names for a player\n'
         final += "!add_alt -{player} -{replacement}: adds the replacement to a player's alts\n"
+
         final += '!h2h -{player1} -{player2}: returns the h2h record between player1 and player2\n'
+        final += '!compare -{player1} -{player2}: returns the record vs PR + extras and vs both have played against\n'
+
         final += "!results {player}: returns player's results\n"
+        
 ##        final += "!alltournaments: returns all tournaments in the database... it's going to be long\n"
+
+
         final += "!addurl {url}: adds tournament and saves it. Challonge or Smash.gg have to include http section\n"
+
+
         final += "!uploadloadin: uploads the LoadIn.txt file\n"
         final += "!uploadtournaments: uploads the file with all tournament info\n"
         final += "!uploadentrants: uploads the entrant list file\n"
         final += "!upload_alt_names: uploads the alt names file\n"
+
         
 
         final += "!commands: returns commands\n"
@@ -241,4 +345,6 @@ def on_message(message):
 
 
             
-client.run(#DISCORD KEY)
+##client.run('NDA5Mjg1NjY1MzMxNjA5NjAy.DVcviA.dKiHinANP7NHmUppSkO3QZQfOws')
+##client.run('NDA5Mjg1NjY1MzMxNjA5NjAy.DX-PrQ.LiMtqG1LxHEHV0u5haWpQAfZOMo')#Testing
+client.run('NDIwNDEwNTA1MzAwMjc5Mjk2.DX-RZg.KgwsuOWHRWrwzsV_jb69_e6fTZI')#SacaSuBot

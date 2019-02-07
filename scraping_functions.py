@@ -79,7 +79,7 @@ def remove_symbols(string):
 def remove_pools(string):
     # Things to remove:
     # Anything inside square brackets
-    string = re.sub("\[.*\]", "", string).strip()
+##    string = re.sub("\[.*\]", "", string).strip()
     # P2/2, (P2-2), etc.
     string = re.sub("\((?:P|)\d+(?:|(?:/:|-)\d+)\)", "", string).strip()
     # A2.2, B2.2, etc.
